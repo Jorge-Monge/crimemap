@@ -1,5 +1,8 @@
+import pymysql
+import dbconfig
+
 class DBHelper:
-    import dbconfig
+    
     def connect(self, database="crimemap"):
         return pymsql.connect(host='localhost',
                               user=dbconfig.db_user,
