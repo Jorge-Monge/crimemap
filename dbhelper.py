@@ -16,7 +16,7 @@ class DBHelper:
         finally:
             connection.close()
 
-    def add_input(self.data):
+    def add_input(self, data):
         connection = self.connect()
         try:
             # The following introduce a deliberate security flaw.
