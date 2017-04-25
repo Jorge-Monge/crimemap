@@ -1,4 +1,4 @@
-class = DBHelper:
+class DBHelper:
 
     def connect(self, database="crimemap"):
         return pymsql.connect(host='localhost',
