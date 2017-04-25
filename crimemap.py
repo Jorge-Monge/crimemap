@@ -15,18 +15,11 @@ def home():
         data = None
     return render_template("home.html", data=data)
 
-@app.route("/add", methods=["POSTS"])
+@app.route("/add", methods=["POST"])
 def add():
     try:
         data = request.form.get("userinput")
         DB.add_input(data)
-    except Exception as e:
-        print e
-    return home()
-
-def clear():
-    try:
-        DB.clear_all()
     except Exception as e:
         print e
     return home()
