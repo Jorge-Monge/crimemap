@@ -1,6 +1,6 @@
 import dbconfig
 if dbconfig.test:
-    from mockdbhelper import MockDBHelper
+    from mockdbhelper import DBHelper
 else:
     from dbhelper import DBHelper
 from flask import Flask

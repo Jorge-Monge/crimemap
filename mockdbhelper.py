@@ -1,5 +1,5 @@
 
-class MockDBHelper:
+class DBHelper:
 
     def connect(self, database="crimemap"):
         pass
