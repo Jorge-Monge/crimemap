@@ -1,19 +1,21 @@
-<html>
-<body>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript">
+      function initialize() {
+      	var mapOptions = {
+      		center: new google.maps.LatLng(-33.30578, 26.52344),
+      		zoom: 15
+      	};
+      	var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+      }
+      </script>
     <title>Crime Map</title>
    </head>
 
-   <h1>Crime Map</h1>
-   <form action="/add" method="POST">
-     <input type="text" name="userinput">
-     <input type="submit" value="Submit">
-    </form>
+   <body onload="initialize()">
+     <div id="map-canvas" style="width:80%; height:500px;margin-right: auto;margin-left: auto"></div>
+   </body>
 
-    <a href="/clear">Clear</a>
-    {% for userinput in data %}
-      <p> {{userinput}}</p>
-      {% endfor %}
-
-</body>
 </html>
